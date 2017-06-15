@@ -1,0 +1,5 @@
+package: github.com/amatotsuji/pp
+import:
+- package: github.com/mattn/go-colorable
+testImport:
+- package: github.com/k0kubun/colorstring
