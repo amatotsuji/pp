@@ -182,6 +182,12 @@ func (p *printer) printStruct() {
 		for i := 0; i < p.value.NumField(); i++ {
 			field := colorize(p.value.Type().Field(i).Name, currentScheme.FieldName)
 			value := p.value.Field(i)
+			// skip not exported field.
+			// TODO: add parameters setting deciding whether or not
+			if !value.CanInterface() {
+				continue
+			}
+
 			p.indentPrintf("%s:\t%s,\n", field, p.format(value))
 		}
 	})

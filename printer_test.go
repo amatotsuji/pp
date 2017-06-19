@@ -12,6 +12,7 @@ import (
 	// Use fork until following PR is merged
 	// https://github.com/mitchellh/colorstring/pull/3
 	"github.com/k0kubun/colorstring"
+	"os"
 )
 
 type testCase struct {
